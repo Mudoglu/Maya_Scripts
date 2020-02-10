@@ -1,0 +1,142 @@
+[
+  {
+    "renderSetupLayer": {
+      "collections": [
+        {
+          "renderSettingsCollection": {
+            "children": [
+              {
+                "absUniqueOverride": {
+                  "attrValue": {
+                    "connectable": false, 
+                    "type": "String", 
+                    "value": "sphere_PV"
+                  }, 
+                  "attribute": "imageFilePrefix", 
+                  "localRender": false, 
+                  "name": "imageFilePrefix", 
+                  "selfEnabled": true, 
+                  "targetNodeName": "defaultRenderGlobals"
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "name": "RenderSettingsCollection", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "defaultRenderQuality\ndefaultArnoldRenderOptions\ndefaultRenderGlobals\ndefaultArnoldDriver\ndefaultResolution\ndefaultArnoldFilter", 
+                "typeFilter": 0
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "collection": {
+                  "children": [
+                    {
+                      "absOverride": {
+                        "attrValue": {
+                          "connectable": true, 
+                          "type": "Bool", 
+                          "value": false
+                        }, 
+                        "attribute": "primaryVisibility", 
+                        "localRender": false, 
+                        "name": "primaryVisibility", 
+                        "selfEnabled": true
+                      }
+                    }
+                  ], 
+                  "isolateSelected": false, 
+                  "name": "collection1_shapes", 
+                  "selector": {
+                    "simpleSelector": {
+                      "customFilterValue": "", 
+                      "pattern": "*", 
+                      "previousPattern": "*", 
+                      "staticSelection": "", 
+                      "typeFilter": 2
+                    }
+                  }, 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "isolateSelected": false, 
+            "name": "collection_Hidden", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "*", 
+                "previousPattern": "*", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "collection": {
+                  "children": [
+                    {
+                      "absOverride": {
+                        "attrValue": {
+                          "connectable": true, 
+                          "type": "Bool", 
+                          "value": true
+                        }, 
+                        "attribute": "primaryVisibility", 
+                        "localRender": false, 
+                        "name": "primaryVisibility1", 
+                        "selfEnabled": true
+                      }
+                    }
+                  ], 
+                  "isolateSelected": false, 
+                  "name": "collection_Visible_shapes", 
+                  "selector": {
+                    "simpleSelector": {
+                      "customFilterValue": "", 
+                      "pattern": "*", 
+                      "previousPattern": "*", 
+                      "staticSelection": "", 
+                      "typeFilter": 2
+                    }
+                  }, 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "isolateSelected": false, 
+            "labelColor": "Green", 
+            "name": "collection_Visible", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }
+      ], 
+      "name": "RL_PrimaryVisibility", 
+      "renderable": true
+    }
+  }
+]
