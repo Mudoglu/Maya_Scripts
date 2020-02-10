@@ -6,3 +6,5 @@ To get the ID JSON files for Mayas RenderSetup working you need to create the ne
 
 To load the JSON files in the RenderSetup you need to set the right path in the MayaPrefs --> Render.
 
+![](/images/rprefs.JPG)
+
