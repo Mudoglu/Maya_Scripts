@@ -1,0 +1,177 @@
+[
+  {
+    "renderSetupLayer": {
+      "collections": [
+        {
+          "renderSettingsCollection": {
+            "children": [
+              {
+                "absUniqueOverride": {
+                  "attrValue": {
+                    "connectable": true, 
+                    "type": "String", 
+                    "value": "name_material_id"
+                  }, 
+                  "attribute": "imageFilePrefix", 
+                  "localRender": false, 
+                  "name": "imageFilePrefix", 
+                  "selfEnabled": true, 
+                  "targetNodeName": "defaultRenderGlobals"
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "name": "RenderSettingsCollection", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "defaultRenderQuality\ndefaultArnoldRenderOptions\ndefaultRenderGlobals\ndefaultArnoldDriver\ndefaultResolution\ndefaultArnoldFilter\nvraySettings", 
+                "typeFilter": 0
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "collection": {
+                  "children": [
+                    {
+                      "shaderOverride": {
+                        "attribute": "", 
+                        "connectionStr": "VRayLightMtl_BLACK.outColor", 
+                        "localRender": false, 
+                        "name": "shaderOverride2", 
+                        "selfEnabled": true
+                      }
+                    }
+                  ], 
+                  "expandedState": false, 
+                  "isolateSelected": false, 
+                  "name": "BLACK_Turn_Off_to_see_ShadingGroups", 
+                  "selector": {
+                    "simpleSelector": {
+                      "customFilterValue": "", 
+                      "pattern": "*", 
+                      "previousPattern": "*", 
+                      "staticSelection": "", 
+                      "typeFilter": 11
+                    }
+                  }, 
+                  "selfEnabled": false
+                }
+              }, 
+              {
+                "collection": {
+                  "children": [
+                    {
+                      "shaderOverride": {
+                        "attribute": "", 
+                        "connectionStr": "VRayLightMtl_GREEN.outColor", 
+                        "localRender": false, 
+                        "name": "shaderOverride4", 
+                        "selfEnabled": true
+                      }
+                    }
+                  ], 
+                  "expandedState": false, 
+                  "isolateSelected": false, 
+                  "labelColor": "Green", 
+                  "name": "GREEN", 
+                  "selector": {
+                    "simpleSelector": {
+                      "customFilterValue": "", 
+                      "pattern": "", 
+                      "previousPattern": "", 
+                      "staticSelection": "", 
+                      "typeFilter": 11
+                    }
+                  }, 
+                  "selfEnabled": true
+                }
+              }, 
+              {
+                "collection": {
+                  "children": [
+                    {
+                      "shaderOverride": {
+                        "attribute": "", 
+                        "connectionStr": "VRayLightMtl_RED.outColor", 
+                        "localRender": false, 
+                        "name": "shaderOverride1", 
+                        "selfEnabled": true
+                      }
+                    }
+                  ], 
+                  "expandedState": false, 
+                  "isolateSelected": false, 
+                  "labelColor": "Red", 
+                  "name": "RED", 
+                  "selector": {
+                    "simpleSelector": {
+                      "customFilterValue": "", 
+                      "pattern": "", 
+                      "previousPattern": "", 
+                      "staticSelection": "", 
+                      "typeFilter": 11
+                    }
+                  }, 
+                  "selfEnabled": true
+                }
+              }, 
+              {
+                "collection": {
+                  "children": [
+                    {
+                      "shaderOverride": {
+                        "attribute": "", 
+                        "connectionStr": "VRayLightMtl_BLUE.outColor", 
+                        "localRender": false, 
+                        "name": "shaderOverride3", 
+                        "selfEnabled": true
+                      }
+                    }
+                  ], 
+                  "expandedState": false, 
+                  "isolateSelected": false, 
+                  "labelColor": "Blue", 
+                  "name": "BLUE", 
+                  "selector": {
+                    "simpleSelector": {
+                      "customFilterValue": "", 
+                      "pattern": "", 
+                      "previousPattern": "", 
+                      "staticSelection": "", 
+                      "typeFilter": 11
+                    }
+                  }, 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "isolateSelected": false, 
+            "name": "COLLECTION_RGB", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "*", 
+                "previousPattern": "*", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }
+      ], 
+      "name": "RL_Material_ID", 
+      "notes": "import maya.cmds as cmds\n\n\nshader = cmds.shadingNode( 'VRayLightMtl', asShader=True, name=\"VRayLightMtl_BLACK\" )\ncmds.setAttr('VRayLightMtl_BLACK.compensateCameraExposure' , 1)\ncmds.setAttr('VRayLightMtl_BLACK.color' , 0, 0, 0)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"VRayLightMtl_BLACKSG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\nshader = cmds.shadingNode( 'VRayLightMtl', asShader=True, name=\"VRayLightMtl_RED\" )\ncmds.setAttr('VRayLightMtl_RED.compensateCameraExposure' , 1)\ncmds.setAttr('VRayLightMtl_RED.color' , 1, 0, 0)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"VRayLightMtl_REDSG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\nshader = cmds.shadingNode( 'VRayLightMtl', asShader=True, name=\"VRayLightMtl_GREEN\" )\ncmds.setAttr('VRayLightMtl_GREEN.compensateCameraExposure' , 1)\ncmds.setAttr('VRayLightMtl_GREEN.color' , 0, 1, 0)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"VRayLightMtl_GREENSG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\nshader = cmds.shadingNode( 'VRayLightMtl', asShader=True, name=\"VRayLightMtl_BLUE\" )\ncmds.setAttr('VRayLightMtl_BLUE.compensateCameraExposure' , 1)\ncmds.setAttr('VRayLightMtl_BLUE.color' , 0, 0, 1)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"VRayLightMtl_BLUESG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\n\n", 
+      "renderable": true
+    }
+  }
+]
