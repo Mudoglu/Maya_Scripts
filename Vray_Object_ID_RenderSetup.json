@@ -1,0 +1,159 @@
+[
+  {
+    "renderSetupLayer": {
+      "collections": [
+        {
+          "renderSettingsCollection": {
+            "children": [
+              {
+                "absUniqueOverride": {
+                  "attrValue": {
+                    "connectable": false, 
+                    "type": "String", 
+                    "value": "name_object_id"
+                  }, 
+                  "attribute": "imageFilePrefix", 
+                  "localRender": false, 
+                  "name": "imageFilePrefix2", 
+                  "selfEnabled": true, 
+                  "targetNodeName": "defaultRenderGlobals"
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "name": "RenderSettingsCollection", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "defaultRenderQuality\ndefaultArnoldRenderOptions\ndefaultRenderGlobals\ndefaultArnoldDriver\ndefaultResolution\ndefaultArnoldFilter\nvraySettings", 
+                "typeFilter": 0
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "materialOverride": {
+                  "attribute": "", 
+                  "connectionStr": "VRayLightMtl_BLACKSG.message", 
+                  "localRender": false, 
+                  "name": "materialOverride1", 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "name": "BLACK", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "*", 
+                "previousPattern": "*", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "materialOverride": {
+                  "attribute": "", 
+                  "connectionStr": "VRayLightMtl_REDSG.message", 
+                  "localRender": false, 
+                  "name": "materialOverride2", 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "labelColor": "Red", 
+            "name": "RED", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "materialOverride": {
+                  "attribute": "", 
+                  "connectionStr": "VRayLightMtl_GREENSG.message", 
+                  "localRender": false, 
+                  "name": "materialOverride3", 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "labelColor": "Green", 
+            "name": "GREEN", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }, 
+        {
+          "collection": {
+            "children": [
+              {
+                "materialOverride": {
+                  "attribute": "", 
+                  "connectionStr": "VRayLightMtl_BLUESG.message", 
+                  "localRender": false, 
+                  "name": "materialOverride4", 
+                  "selfEnabled": true
+                }
+              }
+            ], 
+            "expandedState": false, 
+            "isolateSelected": false, 
+            "labelColor": "Blue", 
+            "name": "BLUE", 
+            "selector": {
+              "simpleSelector": {
+                "customFilterValue": "", 
+                "pattern": "", 
+                "previousPattern": "", 
+                "staticSelection": "", 
+                "typeFilter": 1
+              }
+            }, 
+            "selfEnabled": true
+          }
+        }
+      ], 
+      "name": "RL_Object_ID", 
+      "notes": "import maya.cmds as cmds\n\n\nshader = cmds.shadingNode( 'aiUtility', asShader=True, name=\"aiUtility_BLACK\" )\ncmds.setAttr('aiUtility_BLACK.shadeMode' , 2)\ncmds.setAttr('aiUtility_BLACK.color' , 0, 0, 0)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"aiUtility_BLACKSG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\nshader = cmds.shadingNode( 'aiUtility', asShader=True, name=\"aiUtility_RED\" )\ncmds.setAttr('aiUtility_RED.shadeMode' , 2)\ncmds.setAttr('aiUtility_RED.color' , 1, 0, 0)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"aiUtility_REDSG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\nshader = cmds.shadingNode( 'aiUtility', asShader=True, name=\"aiUtility_GREEN\" )\ncmds.setAttr('aiUtility_GREEN.shadeMode' , 2)\ncmds.setAttr('aiUtility_GREEN.color' , 0, 1, 0)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"aiUtility_GREENSG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n\nshader = cmds.shadingNode( 'aiUtility', asShader=True, name=\"aiUtility_BLUE\" )\ncmds.setAttr('aiUtility_BLUE.shadeMode' , 2)\ncmds.setAttr('aiUtility_BLUE.color' , 0, 0, 1)\nshadingGroup = cmds.sets( shader, renderable=True, noSurfaceShader=True, empty=True, name=\"aiUtility_BLUESG\" )\ncmds.connectAttr(shader+\".outColor\", shadingGroup+\".surfaceShader\", force=True)\n", 
+      "renderable": true
+    }
+  }
+]
