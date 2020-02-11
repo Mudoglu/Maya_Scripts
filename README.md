@@ -8,3 +8,10 @@ To load the JSON files in the RenderSetup you need to set the right path in the 
 
 ![](/images/rprefs.JPG)
 
+If the right path is set the Templates shoudl show up here.
+
+![](/images/importtemplate.jpg)
+
+Now the new Randerlayer Should Show up.
+
+![](/images/rendersetup.jpg)
