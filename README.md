@@ -1,4 +1,4 @@
-# Maya_Scripts
+# Maya_Scripts_and_RenderSetup_Templates
 
 Just a punsh of little Helper for Maya.
 
