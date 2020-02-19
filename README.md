@@ -15,3 +15,9 @@ If the right path is set the Templates shoudl show up here.
 Now the new Randerlayer Should Show up.
 
 ![](/images/rendersetup.jpg)
+
+
+
+How the Object ID AOv is build.   (Thanks to Stephen Blair for the Image)
+
+![](/images/objectidaov.png)
